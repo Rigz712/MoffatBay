@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Matthew G, Joe H, Taib, Module 9 - 2/16/25 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+        background: url('images/luca.jpg') no-repeat center center/cover;
+    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        .reservation-finder-summary {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation (Updated to Match Login Page) -->
+    <nav class="nav">
+        <a href="index.html" style="font-weight: bold;">Moffat Bay Lodge</a>
+        <div class="nav-links">
+            <a href="about_us.html">About Us</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="room-reservation.html">Reservations</a>
+            <a href="look_up.html">Reservation Finder</a>
+
+        </div>
+        <a href="Login.html">Log In</a>
+    </nav>
+
+    <div class="container">
+        <section class="search-box">
+            <h2>Find Your Reservation</h2>
+            <p>Enter your reservation ID or email to locate your booking.</p>
+            <input type="text" id="searchInput" placeholder="Reservation ID or Email">
+            <button onclick="searchReservation()">Search</button>
+        </section>
+
+        <section class="reservation-finder-summary" id="reservationFinderSummary">
+            <h3>Reservation Details</h3>
+            <p><strong>Room Size:</strong> <span id="roomSize"></span></p>
+            <p><strong>Number of Guests:</strong> <span id="numGuests"></span></p>
+            <p><strong>Check-in Date:</strong> <span id="checkInDate"></span></p>
+            <p><strong>Check-out Date:</strong> <span id="checkOutDate"></span></p>
+        </section>
+    </div>
+
+    
+    <script>
+        function searchReservation() {
+            let searchInput = document.getElementById('searchInput').value.trim();
+
+            if (searchInput === '') {
+                alert('Please enter a reservation ID or email.');
+                return;
+            }   
+
+            
+            document.getElementById('reservationFinderSummary').style.display = 'block';
+            document.getElementById('roomSize').innerText = 'Deluxe Suite';
+            document.getElementById('numGuests').innerText = '2 Adults, 1 Child';
+            document.getElementById('checkInDate').innerText = 'March 15, 2025';
+            document.getElementById('checkOutDate').innerText = 'March 20, 2025';
+        }
+
+    </script>
+
+    <!-- Footer (Updated to Match Login Page) -->
+    <footer class="footer">
+        <p>1317 Comfort St, Washington, CA 99403, USA</p>
+        <p>&copy; 2025 Moffat Bay Lodge. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

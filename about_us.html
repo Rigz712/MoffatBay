@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Matthew G, Joe H, Taib, Module 9 - 2/16/25 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .text-section {
+            width: 50%;
+        }
+        .text-section h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .text-section p {
+            font-size: 18px;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        .text-section .highlight {
+            height: 3px;
+            width: 60px;
+            margin: 10px 0;
+        }
+        .image-section1 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+        .image-section1 img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-section2 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+        .image-section2 img {
+            width: 45%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" style="font-weight: bold;">Moffat Bay Lodge</a>
+        <div class="nav-links">
+            <a href="about_us.html">About Us</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="room-reservation.html">Reservations</a>
+            <a href="look_up.html">Reservation Finder</a>
+
+        </div>
+        <a href="login.html">Log In</a>
+    </nav>
+
+    <div class="container">
+        <div class="text-section">
+            <h1>Welcome to Moffat Bay Lodge.</h1>
+            <div class="highlight"></div>
+            <p> Nestled in the heart of Joviedsa Island, Moffat Bay Lodge was envisioned as a premier retreat designed to harmonize with the island’s natural beauty.
+             
+            </p>
+            <p>Our lodge offers an unparalleled experience where relaxation meets adventure. Whether you seek a serene escape, outdoor exploration, or an eco-friendly getaway, we are dedicated to providing exceptional hospitality while preserving the breathtaking landscapes of the San Juan Islands.</p>
+            <p>Embark on a journey to Moffat Bay Lodge Now!</p>
+            <a href="index.html" class="btn">Book Your Stay</a>
+
+        </div>
+        
+        <div class="image-section1">
+            <img src="images/image1.jpeg" alt="Scenic Marina">
+            <img src="images/image2.jpg" alt="Cozy Lodge">
+            <img src="images/tom.jpg" alt="Lakeside Retreat">
+        </div> 
+    </div>
+
+    <div class="container">
+        <div class="text-section">
+        <h2>Events & Entertainment</h2>
+        <p>Choose an inspirational resort setting for your offsite meeting, conference, or celebration, with careful planning from our event experts. Add-ons like excursions, activities, and more make resort events truly unforgettable.</p>
+        <p>When the meeting is over, you're already in a beautiful destination. Add on a day or two to your business trip for ultimate recuperation.</p>
+        <button onclick="location.href='#contact_us'" class="btn">Contact us</button>
+        </div>
+
+        <div class="image-section2">
+            <img src="images/mat.jpg" alt="Event venue">
+            <img src="images/event.jpeg" alt="Event venue">
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="text-section">
+        <h2>Island Adventures Await</h2>
+        <p>Moffat Bay Lodge is the perfect base for exploring the wonders of Joviedsa Island and the surrounding San Juan Islands. From thrilling water activities to scenic hikes, there's something for everyone.</p>
+        <a href="attractions.html" class="btn">Learn More</a>
+        </div>
+        <div class="image-section2">
+            <img src="images/Hiking.jpg" alt="Hiking Trail">
+            <img src="images/Lakeside.webp" alt="Lakeside View">
+
+        </div>
+    </div>
+
+    <section id="contact_us">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to learn more? We'd love to hear from you!</p>
+        <form id="contact-form" action="http://localhost:5000/submit_contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <div class="footer">
+        <p>1317 Comfort St, Washington, CA 99403, USA</p>
+        <p>&copy; 2025 Moffat Bay Lodge. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

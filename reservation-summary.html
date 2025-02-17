@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Matthew G, Joe H, Taib, Module 9 - 2/16/25 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Summary - Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <a href="index.html" style="font-weight: bold;">Moffat Bay Lodge</a>
+        <div class="nav-links">
+            <a href="about_us.html">About Us</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="room-reservation.html">Reservations</a>
+            <a href="look_up.html">Reservation Finder</a>
+
+        </div>
+        <a href="login.html">Log In</a>
+    </nav>
+
+    <!-- Summary Section -->
+    <section class="summary-container">
+        <div class="summary-box">
+            <h2>Reservation Summary</h2>
+            <p>Review your reservation details before confirming your stay.</p>
+            
+            <div class="summary-details">
+                <p><strong>Full Name:</strong> <span id="summary-name"></span></p>
+                <p><strong>Email:</strong> <span id="summary-email"></span></p>
+                <p><strong>Check-in Date:</strong> <span id="summary-checkin"></span></p>
+                <p><strong>Check-out Date:</strong> <span id="summary-checkout"></span></p>
+                <p><strong>Room Type:</strong> <span id="summary-room"></span></p>
+                <p><strong>Number of Guests:</strong> <span id="summary-guests"></span></p>
+            </div>
+
+            <button class="btn confirm-btn">Confirm Reservation</button>
+            <button class="btn edit-btn" onclick="window.history.back()">Edit Information</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>1317 Comfort St, Washington, CA 99403, USA</p>
+        <p>&copy; 2025 Moffat Bay Lodge. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Fetch Data -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+
+            document.getElementById("summary-name").textContent = params.get("full_name") || "N/A";
+            document.getElementById("summary-email").textContent = params.get("email") || "N/A";
+            document.getElementById("summary-checkin").textContent = params.get("check_in") || "N/A";
+            document.getElementById("summary-checkout").textContent = params.get("check_out") || "N/A";
+            document.getElementById("summary-room").textContent = params.get("room_type") || "N/A";
+            document.getElementById("summary-guests").textContent = params.get("guests") || "N/A";
+        });
+    </script>
+
+</body>
+</html>

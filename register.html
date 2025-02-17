@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Matthew G, Joe H, Taib, Module 9 - 2/16/25 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+    body {
+        background: url('images/jeff.jpg') no-repeat center center/cover;
+    }
+</style>
+	
+</head>
+<body class="register-page">
+    <div class="nav">
+        <a href="index.html" style="font-weight: bold;">Moffat Bay Lodge</a>
+        <div class="nav-links">
+            <a href="about_us.html">About Us</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="accommodations.html">Accommodations</a>
+            <a href="room-reservation.html">Reservations</a>
+            <a href="look_up.html">Reservation Finder</a>
+
+        </div>
+        <a href="Login.html">Log In</a>
+    </div>
+    
+    <div class="container">
+        <div class="login-box"> <!-- Changed from register-box to login-box for consistency -->
+            <h2>Create an Account</h2>
+            <form action="#" method="POST">    
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" required>
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" required>
+
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephone" name="telephone" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>1317 Comfort St, Washington, CA 99403, USA</p>
+        <p>&copy; 2025 Moffat Bay Lodge. All rights reserved.</p>
+    </div>
+</body>
+</html>
